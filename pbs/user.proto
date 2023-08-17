@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+option go_package = "../service";
+
+// package service;
+
+// import "google/protobuf/empty.proto";
+// import "google/api/annotations.proto";
+
+option php_namespace = "Pot\\Proto";
+option php_metadata_namespace = "Pot\\Proto";
+
+service Greeter {
+  rpc SayHello (HelloRequest) returns (HelloReply) {}
+}
+
+message HelloRequest {
+  string name = 1;
+}
+
+message HelloReply {
+  string message = 1;
+}

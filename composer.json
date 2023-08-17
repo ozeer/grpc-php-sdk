@@ -1,0 +1,28 @@
+{
+    "name": "pot/grpc-php-sdk",
+    "description": "PHP SDK for Passport by grpc",
+    "type": "library",
+    "require": {
+        "grpc/grpc": "^1.57",
+        "google/protobuf": "^3.24",
+        "guzzlehttp/guzzle": "^7.7",
+        "monolog/monolog": "^3.4",
+        "google/common-protos": "^4.2"
+    },
+    "require-dev": {
+        "ext-json": "*",
+        "phpunit/phpunit": "^10.3"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Pot\\": "src/Pot"
+        }
+    },
+    "authors": [
+        {
+            "name": "zhouyang",
+            "email": "zhouyang2021@163.com"
+        }
+    ]
+}
