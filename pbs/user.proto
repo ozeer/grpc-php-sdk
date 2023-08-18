@@ -11,28 +11,28 @@ option php_namespace = "Pot\\Proto";
 option php_metadata_namespace = "Pot\\Proto";
 
 service User {
-  rpc Register (RegisterRequest) returns (SuccessRsp) {}
-  rpc Login (LoginRequest) returns (LoginRsp) {}
+  rpc Register (RegisterReq) returns (RegisterResp) {}
+  rpc Login (LoginReq) returns (LoginResp) {}
 }
 
-message RegisterRequest {
+message RegisterReq {
   string name = 1;
   string mobile = 2;
   string password = 3;
 }
 
-message SuccessRsp {
+message RegisterResp {
   int32 code = 1;
   string data = 2;
   string message = 3;
 }
 
-message LoginRequest {
+message LoginReq {
   string mobile = 1;
   string password = 2;
 }
 
-message LoginRsp {
+message LoginResp {
   string access_token = 1;
   int32 expire_in = 2;
 }

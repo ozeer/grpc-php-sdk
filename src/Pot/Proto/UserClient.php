@@ -17,30 +17,30 @@ class UserClient extends \Grpc\BaseStub {
     }
 
     /**
-     * @param \Pot\Proto\RegisterRequest $argument input argument
+     * @param \Pot\Proto\RegisterReq $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
      * @return \Grpc\UnaryCall
      */
-    public function Register(\Pot\Proto\RegisterRequest $argument,
+    public function Register(\Pot\Proto\RegisterReq $argument,
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/User/Register',
         $argument,
-        ['\Pot\Proto\SuccessRsp', 'decode'],
+        ['\Pot\Proto\RegisterResp', 'decode'],
         $metadata, $options);
     }
 
     /**
-     * @param \Pot\Proto\LoginRequest $argument input argument
+     * @param \Pot\Proto\LoginReq $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
      * @return \Grpc\UnaryCall
      */
-    public function Login(\Pot\Proto\LoginRequest $argument,
+    public function Login(\Pot\Proto\LoginReq $argument,
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/User/Login',
         $argument,
-        ['\Pot\Proto\LoginRsp', 'decode'],
+        ['\Pot\Proto\LoginResp', 'decode'],
         $metadata, $options);
     }
 

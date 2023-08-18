@@ -8,7 +8,7 @@ $client = new \Pot\Proto\UserClient('127.0.0.1:8088', [
 ]);
 
 // 实例化 LoginRequest 请求类
-$request = new \Pot\Proto\LoginRequest();
+$request = new \Pot\Proto\LoginReq();
 $request->setMobile("18701588471");
 $request->setPassword("123456");
 

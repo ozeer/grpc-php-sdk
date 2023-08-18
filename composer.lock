@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d5c337daa590859158b9eecc620d5d68",
+    "content-hash": "bbffa54601d38767718015e8bc97fc35",
     "packages": [
         {
             "name": "google/common-protos",
@@ -2510,7 +2510,9 @@
     "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "php": ">=8.0"
+    },
     "platform-dev": {
         "ext-json": "*"
     },

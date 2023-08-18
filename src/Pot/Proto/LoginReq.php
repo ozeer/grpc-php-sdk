@@ -9,9 +9,9 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Generated from protobuf message <code>LoginRequest</code>
+ * Generated from protobuf message <code>LoginReq</code>
  */
-class LoginRequest extends \Google\Protobuf\Internal\Message
+class LoginReq extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>string mobile = 1;</code>

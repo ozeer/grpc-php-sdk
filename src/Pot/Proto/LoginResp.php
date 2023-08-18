@@ -9,9 +9,9 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Generated from protobuf message <code>LoginRsp</code>
+ * Generated from protobuf message <code>LoginResp</code>
  */
-class LoginRsp extends \Google\Protobuf\Internal\Message
+class LoginResp extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>string access_token = 1;</code>
