@@ -166,10 +166,10 @@ class Log
 
     private static function getSlice(): string
     {
-	    return match (self::$logSetting['logSlice']) {
-		    "hourly" => "-" . date("YmdH") . ".log",
-		    "daily" => "-" . date("Ymd") . ".log",
-	    };
+        return match (self::$logSetting['logSlice']) {
+            "hourly" => "-" . date("YmdH") . ".log",
+            "daily" => "-" . date("Ymd") . ".log",
+        };
     }
 
     private static function setLogPath($backtrace = null): void
@@ -181,7 +181,7 @@ class Log
             $sLogDirPrefix = "/tmp/";
             $_SERVER['APP_NAME'] = self::DEFAULT_LOG_DIRECTORY;
         }
-        
+
         if (isset($_SERVER['APP_NAME'])) {
             self::$logSetting['logPath'] = $sLogDirPrefix . $_SERVER['APP_NAME'] . DIRECTORY_SEPARATOR;
         } else {
@@ -192,10 +192,10 @@ class Log
         }
     }
 
-	/**
-	 * @throws Exception
-	 */
-	public static function setExcelPath($oldPath, $fileName)
+    /**
+     * @throws Exception
+     */
+    public static function setExcelPath($oldPath, $fileName)
     {
         if (isset($_SERVER['APP_NAME']) && $_SERVER['APP_NAME'] === 'sapi') {
             $path = self::DEFAULT_LOG_PATH_PREFIX . $_SERVER['APP_NAME'] . '/excel';
@@ -223,7 +223,7 @@ class Log
                 self::addSystemLog($methodList[0], $methodList[2], $args, $methodList[1]);
             }
         } else {
-                [$logPath, $line] = self::getBackTrace($backtrace);
+            [$logPath, $line] = self::getBackTrace($backtrace);
             self::addGeneralLog($logPath, $line, $method, $args);
         }
     }
@@ -231,7 +231,7 @@ class Log
     private static function getBackTrace($backtrace): array
     {
         $callFile = ltrim(str_replace(array(
-	        dirname(__DIR__, 2),
+            dirname(__DIR__, 2),
             '.php',
             '/'
         ), array(
@@ -278,7 +278,7 @@ class Log
 
     private static function addGeneralLog($logPath, $line, $logType, $logData): void
     {
-    	$flag = $logPath . "-" . $line;
+        $flag = $logPath . "-" . $line;
         if (!isset(self::$singleFormatter[$flag])) {
             $output = "%datetime%#line:{$line}#%level_name%#%message%#%context%\n";
             self::$singleFormatter[$logPath . "-" . $line] = new LineFormatter($output);
